@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo;
+package model;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -22,14 +22,14 @@ public class PaymentPK implements Serializable {
     private int month;
     @Basic(optional = false)
     @Column(name = "Registration_NumeroMatricula")
-    private int registrationNumeroMatricula;
+    private int registrationNumber;
 
     public PaymentPK() {
     }
 
     public PaymentPK(int month, int registrationNumeroMatricula) {
         this.month = month;
-        this.registrationNumeroMatricula = registrationNumeroMatricula;
+        this.registrationNumber = registrationNumeroMatricula;
     }
 
     public int getMonth() {
@@ -41,18 +41,18 @@ public class PaymentPK implements Serializable {
     }
 
     public int getRegistrationNumeroMatricula() {
-        return registrationNumeroMatricula;
+        return registrationNumber;
     }
 
     public void setRegistrationNumeroMatricula(int registrationNumeroMatricula) {
-        this.registrationNumeroMatricula = registrationNumeroMatricula;
+        this.registrationNumber = registrationNumeroMatricula;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
         hash += (int) month;
-        hash += (int) registrationNumeroMatricula;
+        hash += (int) registrationNumber;
         return hash;
     }
 
@@ -66,7 +66,7 @@ public class PaymentPK implements Serializable {
         if (this.month != other.month) {
             return false;
         }
-        if (this.registrationNumeroMatricula != other.registrationNumeroMatricula) {
+        if (this.registrationNumber != other.registrationNumber) {
             return false;
         }
         return true;
@@ -74,7 +74,7 @@ public class PaymentPK implements Serializable {
 
     @Override
     public String toString() {
-        return "modelo.PaymentPK[ month=" + month + ", registrationNumeroMatricula=" + registrationNumeroMatricula + " ]";
+        return "modelo.PaymentPK[ month=" + month + ", registrationNumeroMatricula=" + registrationNumber + " ]";
     }
     
 }
