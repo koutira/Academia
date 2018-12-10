@@ -21,7 +21,7 @@ public class ManagementEntities {
     {
         if (fabrica == null)
         {
-            fabrica = Persistence.createEntityManagerFactory("MR");
+            fabrica = Persistence.createEntityManagerFactory("AcademiaMacabraPU");
         }
         
         return fabrica.createEntityManager();
